@@ -35,6 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({
     { name: 'Services', section: 'services' },
     { name: 'Portfolio', section: 'portfolio' },
     { name: 'Team', section: 'team' },
+    { name: 'Testimonials', section: 'testimonials' },
     { name: 'Contact', section: 'contact' },
   ];
 
