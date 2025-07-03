@@ -21,7 +21,7 @@ const team: TeamMember[] = [
     id: 1,
     name: 'Alex Johnson',
     role: 'Full Stack Developer',
-    bio: 'Experienced developer with expertise in React, Node.js, and cloud infrastructure. Passionate about creating scalable and performant web applications.',
+    bio: 'Experienced developer with expertise in React, Node.js, and cloud infrastructure.',
     image: '/team-member-1.svg',
     social: {
       twitter: '#',
@@ -33,7 +33,7 @@ const team: TeamMember[] = [
     id: 2,
     name: 'Sarah Chen',
     role: 'UI/UX Designer',
-    bio: 'Creative designer focused on crafting intuitive user experiences and beautiful interfaces. Combines aesthetics with functionality to create engaging designs.',
+    bio: 'Creative designer focused on crafting intuitive user experiences and beautiful interfaces.',
     image: '/team-member-2.svg',
     social: {
       twitter: '#',
@@ -45,7 +45,7 @@ const team: TeamMember[] = [
     id: 3,
     name: 'Michael Rodriguez',
     role: 'Mobile Developer',
-    bio: 'Specialized in native and cross-platform mobile development. Builds high-performance apps with a focus on user experience and technical excellence.',
+    bio: 'Specialized in native and cross-platform mobile development with focus on performance.',
     image: '/team-member-3.svg',
     social: {
       twitter: '#',
@@ -57,7 +57,7 @@ const team: TeamMember[] = [
     id: 4,
     name: 'Emily Taylor',
     role: 'Project Manager',
-    bio: 'Experienced in managing complex development projects from concept to completion. Ensures timely delivery and effective communication throughout the process.',
+    bio: 'Experienced in managing complex development projects from concept to completion.',
     image: '/team-member-4.svg',
     social: {
       twitter: '#',
@@ -73,7 +73,7 @@ const TeamSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -96,12 +96,12 @@ const TeamSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-muted-foreground text-lg">
             We're a lean, driven team of self-taught developers who've turned our passion into purpose. 
-            While we're fresh to the freelance world, we bring energy, creativity, and a commitment to excellence in everything we do.
+            While we're fresh to the freelance world, we bring energy, creativity, and a commitment to excellence.
           </p>
         </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -110,40 +110,32 @@ const TeamSection = () => {
           {team.map((member) => (
             <motion.div
               key={member.id}
-              className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
+              className="bg-card rounded-lg border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg group p-6"
               variants={itemVariants}
             >
-              <div className="relative h-64 w-full overflow-hidden bg-gradient-to-br from-primary/5 to-purple-500/5">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative w-20 h-20 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-primary/60" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-primary/80 text-sm mb-4">{member.role}</p>
-                <p className="text-muted-foreground text-sm mb-6">{member.bio}</p>
-                <div className="flex space-x-4">
+                <p className="text-primary/80 text-sm mb-3 font-medium">{member.role}</p>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{member.bio}</p>
+
+                <div className="flex space-x-3 mt-auto">
                   {member.social.twitter && (
                     <a
                       href={member.social.twitter}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full"
                       aria-label={`${member.name}'s Twitter`}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-5 w-5"
-                      >
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                       </svg>
                     </a>
@@ -151,19 +143,10 @@ const TeamSection = () => {
                   {member.social.linkedin && (
                     <a
                       href={member.social.linkedin}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full"
                       aria-label={`${member.name}'s LinkedIn`}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-5 w-5"
-                      >
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                         <rect x="2" y="9" width="4" height="12" />
                         <circle cx="4" cy="4" r="2" />
@@ -173,19 +156,10 @@ const TeamSection = () => {
                   {member.social.github && (
                     <a
                       href={member.social.github}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full"
                       aria-label={`${member.name}'s GitHub`}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-5 w-5"
-                      >
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                       </svg>
                     </a>
