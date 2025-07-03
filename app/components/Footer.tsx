@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image src="/logo.svg" alt="DevTeam Logo" width={40} height={40} />
+              <Image src="/logo.svg" alt="Craftrix Logo" width={40} height={40} />
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
-                DevTeam
+                Craftrix
               </span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
@@ -189,10 +189,10 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} DevTeam. All rights reserved.
+            &copy; {currentYear} Craftrix. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
-            Designed and built with ❤️ by DevTeam
+            Designed and built with ❤️ by Craftrix
           </p>
         </div>
       </div>
