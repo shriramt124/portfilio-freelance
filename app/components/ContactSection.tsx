@@ -28,10 +28,23 @@ const ContactSection = () => {
     setIsSubmitting(true);
     setError('');
 
-    // Simulate form submission
     try {
-      // In a real application, you would send the form data to your backend or a form service
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send the form data to our API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      // If successful, reset the form and show success message
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -40,7 +53,7 @@ const ContactSection = () => {
         message: '',
       });
     } catch (err) {
-      setError('There was an error submitting your message. Please try again.');
+      setError(err instanceof Error ? err.message : 'There was an error submitting your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

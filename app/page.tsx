@@ -10,7 +10,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Handle scroll to update active section
@@ -237,38 +237,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4 md:px-0">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expert Developers</span> for Your Digital Vision
-            </h1>
-            <p className="text-lg md:text-xl text-foreground/80 max-w-xl">
-              We're a team of passionate developers and designers creating exceptional digital experiences that drive business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button 
-                onClick={() => scrollToSection('contact')} 
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
-              >
-                Get in Touch
-              </button>
-              <button 
-                onClick={() => scrollToSection('portfolio')} 
-                className="px-6 py-3 border border-black/10 dark:border-white/10 font-medium rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              >
-                View Our Work
-              </button>
-            </div>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-              <div className="text-8xl">👨‍💻</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 md:px-0 bg-black/[.02] dark:bg-white/[.02]">

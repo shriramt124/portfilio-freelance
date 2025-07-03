@@ -95,7 +95,8 @@ const TeamSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-muted-foreground text-lg">
-            We're a diverse group of talented professionals passionate about creating exceptional digital experiences.
+            We're a lean, driven team of self-taught developers who've turned our passion into purpose. 
+            While we're fresh to the freelance world, we bring energy, creativity, and a commitment to excellence in everything we do.
           </p>
         </div>
 
