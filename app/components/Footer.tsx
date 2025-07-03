@@ -118,12 +118,17 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Cloud Solutions
+                  AI Agents & Automation
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Consulting
+                  Data Analytics
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Cloud Solutions
                 </a>
               </li>
             </ul>

@@ -65,6 +65,21 @@ export default function Home() {
       icon: "🎨"
     },
     {
+      title: "AI Agents & Automation",
+      description: "Intelligent automation solutions using AI agents, LangChain, and LangGraph to streamline your business processes.",
+      icon: "🤖"
+    },
+    {
+      title: "Workflow Automation",
+      description: "Custom n8n workflows and automation pipelines that connect your tools and automate repetitive tasks.",
+      icon: "⚙️"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analytics and visualization solutions to transform your data into actionable business insights.",
+      icon: "📊"
+    },
+    {
       title: "E-commerce Solutions",
       description: "Scalable online stores with secure payment gateways and inventory management systems.",
       icon: "🛒"

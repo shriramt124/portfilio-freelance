@@ -35,6 +35,30 @@ const services: Service[] = [
     description: 'Scalable, secure, and reliable cloud infrastructure and services tailored to your business needs.',
     icon: '/service-cloud.svg',
   },
+  {
+    id: 5,
+    title: 'AI Agents & Automation',
+    description: 'Intelligent automation solutions using AI agents, LangChain, and LangGraph to streamline your business processes.',
+    icon: '/service-web.svg',
+  },
+  {
+    id: 6,
+    title: 'Workflow Automation',
+    description: 'Custom n8n workflows and automation pipelines that connect your tools and automate repetitive tasks.',
+    icon: '/service-mobile.svg',
+  },
+  {
+    id: 7,
+    title: 'Data Analytics',
+    description: 'Advanced data analytics and visualization solutions to transform your data into actionable business insights.',
+    icon: '/service-design.svg',
+  },
+  {
+    id: 8,
+    title: 'Custom Software',
+    description: 'Tailored software solutions designed to address your specific business challenges and requirements.',
+    icon: '/service-cloud.svg',
+  },
 ];
 
 const ServicesSection = () => {
