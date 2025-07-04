@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2" onClick={() => scrollToSection('home')}>
           <Image src="/logo.svg" alt="Craftrix Logo" width={40} height={40} />
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+          <span className="text-xl font-bold text-foreground">
             Craftrix
           </span>
         </Link>
