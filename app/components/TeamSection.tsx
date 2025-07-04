@@ -19,21 +19,21 @@ interface TeamMember {
 const team: TeamMember[] = [
   {
     id: 1,
-    name: 'Alex Johnson',
-    role: 'Full Stack Developer',
+    name: 'Shriram Tiwari',
+    role: '',
     bio: 'Experienced developer with expertise in React, Node.js, and cloud infrastructure.',
     image: '/team-member-1.svg',
     social: {
-      twitter: '#',
-      linkedin: '#',
-      github: '#',
+      twitter: 'https://x.com/Shriramt124',
+      linkedin: 'https://www.linkedin.com/in/shriramt124/',
+      github: 'https://github.com/shriramt124',
     },
   },
   {
     id: 2,
-    name: 'Sarah Chen',
-    role: 'UI/UX Designer',
-    bio: 'Creative designer focused on crafting intuitive user experiences and beautiful interfaces.',
+    name: 'Tushar Gour',
+    role: '',
+    bio: 'Creative designer focused on crafting intuitive user experiences and beautiful interfaces',
     image: '/team-member-2.svg',
     social: {
       twitter: '#',
@@ -43,8 +43,8 @@ const team: TeamMember[] = [
   },
   {
     id: 3,
-    name: 'Michael Rodriguez',
-    role: 'Mobile Developer',
+    name: 'Gouri Sharma',
+    role: '',
     bio: 'Specialized in native and cross-platform mobile development with focus on performance.',
     image: '/team-member-3.svg',
     social: {
@@ -55,8 +55,8 @@ const team: TeamMember[] = [
   },
   {
     id: 4,
-    name: 'Emily Taylor',
-    role: 'Project Manager',
+    name: 'Shrishti Namdeo',
+    role: '',
     bio: 'Experienced in managing complex development projects from concept to completion.',
     image: '/team-member-4.svg',
     social: {
