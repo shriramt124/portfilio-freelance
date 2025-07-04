@@ -20,8 +20,8 @@ const team: TeamMember[] = [
   {
     id: 1,
     name: 'Shriram Tiwari',
-    role: '',
-    bio: 'Experienced developer with expertise in React, Node.js, and cloud infrastructure.',
+    role: 'Full Stack Developer & AI Architect',
+    bio: 'Experienced developer with 1 year in full stack development and system architecture. Specializes in AI agents automation, React, Node.js, and cloud infrastructure.',
     image: '/team-member-1.svg',
     social: {
       twitter: 'https://x.com/Shriramt124',
@@ -32,8 +32,8 @@ const team: TeamMember[] = [
   {
     id: 2,
     name: 'Tushar Gour',
-    role: '',
-    bio: 'Creative designer focused on crafting intuitive user experiences and beautiful interfaces',
+    role: 'Full Stack Developer',
+    bio: 'Skilled in app development, web development, and automation. Focused on creating seamless user experiences across mobile and web platforms.',
     image: '/team-member-2.svg',
     social: {
       twitter: '#',
@@ -44,8 +44,8 @@ const team: TeamMember[] = [
   {
     id: 3,
     name: 'Gouri Sharma',
-    role: '',
-    bio: 'Specialized in native and cross-platform mobile development with focus on performance.',
+    role: 'Data Engineer & DevOps Specialist',
+    bio: 'Currently working at Deloitte. Expert in data engineering, data analytics, and DevOps practices. Specialized in building scalable data pipelines and infrastructure.',
     image: '/team-member-3.svg',
     social: {
       twitter: '#',
@@ -56,8 +56,8 @@ const team: TeamMember[] = [
   {
     id: 4,
     name: 'Shrishti Namdeo',
-    role: '',
-    bio: 'Experienced in managing complex development projects from concept to completion.',
+    role: 'ML Engineer & Data Scientist',
+    bio: 'Ex-intern at Infosys with expertise in machine learning, AI agents, and data analytics. Passionate about creating intelligent solutions and data-driven insights.',
     image: '/team-member-4.svg',
     social: {
       twitter: '#',
