@@ -1,9 +1,8 @@
+"use client";
 
-'use client';
-
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface Project {
   id: number;
@@ -16,88 +15,228 @@ interface Project {
 }
 
 const projects: Project[] = [
+  // {
+  //   id: 1,
+  //   title: "",
+  //   category: "",
+  //   description: "",
+  //   image: "",
+  //   link: "",
+  //   tags: [],
+  // },
   {
     id: 1,
-    title: 'E-commerce Platform',
-    category: 'Web Development',
-    description: 'Full-featured e-commerce platform with product management, cart functionality, and secure payment processing.',
-    image: '/project-1.svg',
-    link: '#',
-    tags: ['React', 'Node.js', 'PostgreSQL']
+    title: "Signify",
+    category: "Machine Learning · Android App",
+    description:
+      "A real-time sign language to text and speech interpreter that uses hand landmark detection and a deep learning model to recognize ASL letters and convert them into spoken words.",
+    image: "/project-1.svg",
+    link: "https://github.com/yourusername/signify",
+    tags: [
+      "ASL",
+      "TensorFlow Lite",
+      "MediaPipe",
+      "Kotlin",
+      "Jetpack Compose",
+      "CameraX",
+      "Sign Language",
+      "AI",
+    ],
   },
   {
     id: 2,
-    title: 'Fitness Tracking App',
-    category: 'Mobile Development',
-    description: 'Cross-platform mobile application for tracking workouts, nutrition, and health metrics with social features.',
-    image: '/project-2.svg',
-    link: '#',
-    tags: ['React Native', 'Firebase', 'Redux']
+    title: "SmartLearn",
+    category: "EdTech · AI Platform",
+    description:
+      "An AI-powered learning platform with resume analysis, YouTube video summarization, quiz generation, and a personalized dashboard. Built with FlutterFlow and Node.js.",
+    image: "/project-2.svg",
+    link: "#",
+    tags: ["FlutterFlow", "Node.js", "AI", "NLP", "Resume Analysis", "EdTech"],
   },
   {
     id: 3,
-    title: 'Financial Dashboard',
-    category: 'UI/UX Design',
-    description: 'Intuitive financial dashboard for visualizing and analyzing complex financial data with customizable widgets.',
-    image: '/project-3.svg',
-    link: '#',
-    tags: ['Figma', 'React', 'Chart.js']
+    title: "Realtime Chat Application",
+    category: "Full Stack · Realtime App",
+    description:
+      "A real-time chat application with user authentication, group chat, and typing indicators. Built with React.js and Node.js with WebSocket integration.",
+    image: "/project-3.svg",
+    link: "#",
+    tags: [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "Express",
+      "WebSockets",
+      "Realtime Chat",
+    ],
   },
   {
     id: 4,
-    title: 'Cloud-based CRM',
-    category: 'Cloud Solutions',
-    description: 'Scalable customer relationship management system with advanced analytics and automation capabilities.',
-    image: '/project-4.svg',
-    link: '#',
-    tags: ['AWS', 'Next.js', 'MongoDB']
+    title: "Streamly",
+    category: "Backend · Video Streaming",
+    description:
+      "A fully-featured YouTube-style backend system with support for video uploads, playback, comments, likes, subscriptions, and user authentication.",
+    image: "/project-4.svg",
+    link: "https://github.com/tushar-gour/youtube-backend",
+    tags: [
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "REST API",
+      "Video Streaming",
+      "Clouodinary",
+    ],
   },
   {
     id: 5,
-    title: 'AI Chat Assistant',
-    category: 'AI Agents & Automation',
-    description: 'Intelligent chatbot using LangChain for customer support with natural language processing capabilities.',
-    image: '/project-1.svg',
-    link: '#',
-    tags: ['LangChain', 'OpenAI', 'Python']
+    title: "VirtualFit",
+    category: "AR/VR · Fashion Tech",
+    description:
+      "An AR/VR-powered clothing trial app that allows users to virtually try on outfits in real-time using Unity and 3D models.",
+    image: "/project-1.svg",
+    link: "#",
+    tags: ["Unity", "AR", "VR", "Fashion Tech", "3D Modeling", "Try-On"],
   },
   {
     id: 6,
-    title: 'Data Analytics Platform',
-    category: 'Data Analytics',
-    description: 'Real-time data visualization and analytics platform with interactive dashboards and reporting tools.',
-    image: '/project-2.svg',
-    link: '#',
-    tags: ['Python', 'Pandas', 'Plotly']
+    title: "BudgetBuddy",
+    category: "Mobile App · Finance",
+    description:
+      "A sleek and user-friendly expense tracker built in Flutter that helps users monitor spending, set budgets, and analyze expense trends.",
+    image: "/project-2.svg",
+    link: "#",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Finance",
+      "Charts",
+      "Mobile App",
+      "Personal Budget",
+    ],
   },
   {
     id: 7,
-    title: 'Workflow Automation',
-    category: 'Workflow Automation',
-    description: 'Custom n8n workflow automation connecting multiple business tools for seamless data synchronization.',
-    image: '/project-3.svg',
-    link: '#',
-    tags: ['n8n', 'API Integration', 'Zapier']
+    title: "Bus Management System",
+    category: "Mobile Development",
+    description:
+      "A mobile application to address critical management challenges within the transportation sector.",
+    image: "/project-3.svg",
+    link: "https://play.google.com/store/apps/details?id=com.svvv.bms",
+    tags: ["Flutter", "Mobile", "App", "Firebase", "MongoDB"],
   },
   {
     id: 8,
-    title: 'Task Management App',
-    category: 'Web Development',
-    description: 'Collaborative task management application with real-time updates and team collaboration features.',
-    image: '/project-4.svg',
-    link: '#',
-    tags: ['Vue.js', 'Socket.io', 'Express']
-  }
+    title: "E-commerce Platform",
+    category: "Web Development",
+    description:
+      "Full-featured e-commerce platform with product management, cart functionality, and secure payment processing.",
+    image: "/project-4.svg",
+    link: "#",
+    tags: ["React", "Node.js", "PostgreSQL"],
+  },
+  {
+    id: 9,
+    title: "Fitness Tracking App",
+    category: "Mobile Development",
+    description:
+      "Cross-platform mobile application for tracking workouts, nutrition, and health metrics with social features.",
+    image: "/project-1.svg",
+    link: "#",
+    tags: ["React Native", "Firebase", "Redux"],
+  },
+  {
+    id: 10,
+    title: "Financial Dashboard",
+    category: "UI/UX Design",
+    description:
+      "Intuitive financial dashboard for visualizing and analyzing complex financial data with customizable widgets.",
+    image: "/project-2.svg",
+    link: "#",
+    tags: ["Figma", "React", "Chart.js"],
+  },
+  {
+    id: 11,
+    title: "Cloud-based CRM",
+    category: "Cloud Solutions",
+    description:
+      "Scalable customer relationship management system with advanced analytics and automation capabilities.",
+    image: "/project-3.svg",
+    link: "#",
+    tags: ["AWS", "Next.js", "MongoDB"],
+  },
+  {
+    id: 12,
+    title: "AI Chat Assistant",
+    category: "AI Agents & Automation",
+    description:
+      "Intelligent chatbot using LangChain for customer support with natural language processing capabilities.",
+    image: "/project-4.svg",
+    link: "#",
+    tags: ["LangChain", "OpenAI", "Python"],
+  },
+  {
+    id: 13,
+    title: "Data Analytics Platform",
+    category: "Data Analytics",
+    description:
+      "Real-time data visualization and analytics platform with interactive dashboards and reporting tools.",
+    image: "/project-1.svg",
+    link: "#",
+    tags: ["Python", "Pandas", "Plotly"],
+  },
+  {
+    id: 14,
+    title: "Workflow Automation",
+    category: "Workflow Automation",
+    description:
+      "Custom n8n workflow automation connecting multiple business tools for seamless data synchronization.",
+    image: "/project-2.svg",
+    link: "#",
+    tags: ["n8n", "API Integration", "Zapier"],
+  },
+  {
+    id: 15,
+    title: "Task Management App",
+    category: "Web Development",
+    description:
+      "Collaborative task management application with real-time updates and team collaboration features.",
+    image: "/project-3.svg",
+    link: "#",
+    tags: ["Vue.js", "Socket.io", "Express"],
+  },
 ];
 
-const categories = ['All', 'Web Development', 'Mobile Development', 'UI/UX Design', 'Cloud Solutions', 'AI Agents & Automation', 'Data Analytics', 'Workflow Automation'];
+const categories = [
+  "All",
+  "Web Development",
+  "Mobile Development",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Data Science",
+  "Backend Development",
+  "Frontend Development",
+  "Full Stack",
+  "Cloud Computing",
+  "DevOps",
+  "UI/UX Design",
+  "Game Development",
+  "AR/VR",
+  "Cybersecurity",
+  "Blockchain",
+  "Automation",
+  "Embedded Systems",
+  "Open Source",
+  "Hackathon Projects",
+];
 
 const PortfolioSection = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects = activeCategory === 'All'
-    ? projects
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
     <section id="portfolio" className="py-20 md:py-32">
@@ -105,7 +244,8 @@ const PortfolioSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
           <p className="text-muted-foreground text-lg">
-            Explore our recent projects and see how we've helped our clients achieve their digital goals.
+            Explore our recent projects and see how we've helped our clients
+            achieve their digital goals.
           </p>
         </div>
 
@@ -114,10 +254,11 @@ const PortfolioSection = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${activeCategory === category
-                ? 'bg-primary text-white'
-                : 'bg-card hover:bg-card/80 text-foreground hover:text-primary border border-border'
-                }`}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                activeCategory === category
+                  ? "bg-primary text-white"
+                  : "bg-card hover:bg-card/80 text-foreground hover:text-primary border border-border"
+              }`}
             >
               {category}
             </button>
@@ -157,13 +298,21 @@ const PortfolioSection = () => {
                     className="bg-white/90 hover:bg-white text-primary p-2 rounded-full transition-colors opacity-0 group-hover:opacity-100"
                     aria-label={`View ${project.title} project`}
                   >
-                    <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </a>
                 </div>
               </div>
-              
+
               <div className="p-5">
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
@@ -171,7 +320,7 @@ const PortfolioSection = () => {
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-1 mb-4">
                   {project.tags.map((tag, index) => (
                     <span
@@ -182,14 +331,22 @@ const PortfolioSection = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <a
                   href={project.link}
                   className="text-primary hover:text-primary/80 text-sm font-medium flex items-center"
                 >
                   View Project
-                  <svg className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  <svg
+                    className="h-4 w-4 ml-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </a>
               </div>
