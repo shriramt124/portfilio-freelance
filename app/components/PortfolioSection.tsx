@@ -26,21 +26,20 @@ const projects: Project[] = [
   // },
   {
     id: 1,
-    title: "Signify",
-    category: "Machine Learning · Android App",
+    title: "Ai Resume Maker and Interview Preparation Platform",
+    category: "Development-web-app",
     description:
-      "A real-time sign language to text and speech interpreter that uses hand landmark detection and a deep learning model to recognize ASL letters and convert them into spoken words.",
-    image: "/project-1.svg",
-    link: "https://github.com/yourusername/signify",
+      "An intelligent web-based application that leverages Artificial Intelligence to automate and enhance the resume creation and review process. The app allows users to generate professional, personalized resumes by simply providing basic information and career goals. It also evaluates existing resumes, suggests improvements using AI, and offers tailored content recommendations based on the targeted job profile.",
+    image: "/ai_resume.png",
+    link: "https://github.com/shriramt124/ui-update",
     tags: [
-      "ASL",
-      "TensorFlow Lite",
-      "MediaPipe",
-      "Kotlin",
-      "Jetpack Compose",
-      "CameraX",
-      "Sign Language",
+      "React.js",
+      "Next.js",
+      "Tailwind Css",
+      "Redux.js",
+      "Open ai",
       "AI",
+      "Javascript"
     ],
   },
   {
@@ -60,15 +59,15 @@ const projects: Project[] = [
     description:
       "A real-time chat application with user authentication, group chat, and typing indicators. Built with React.js and Node.js with WebSocket integration.",
     image: "/project-3.svg",
-    link: "#",
+    link: "https://github.com/shriramt124/graphQLChatApp",
     tags: [
       "React",
       "Node.js",
-      "Socket.io",
       "MongoDB",
       "Express",
-      "WebSockets",
+      "GraphQl",
       "Realtime Chat",
+      "Subscription"
     ],
   },
   {
@@ -131,19 +130,19 @@ const projects: Project[] = [
     category: "Web Development",
     description:
       "Full-featured e-commerce platform with product management, cart functionality, and secure payment processing.",
-    image: "/project-4.svg",
-    link: "#",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    image: "/Ecommerce.png",
+    link: "https://github.com/shriramt124/Ecomm-Luxe",
+    tags: ["React", "Node.js", "Mongodb", "Next.js", "Tailwind Css", "Express.js"],
   },
   {
     id: 9,
-    title: "Fitness Tracking App",
-    category: "Mobile Development",
+    title: "Drawing Web app",
+    category: "Web development",
     description:
-      "Cross-platform mobile application for tracking workouts, nutrition, and health metrics with social features.",
-    image: "/project-1.svg",
-    link: "#",
-    tags: ["React Native", "Firebase", "Redux"],
+      "This is a modern drawing application built with ReactJS and styled using TailwindCSS, allowing users to draw freehand or create rough-looking shapes like rectangles and lines using Rough.js for a hand-drawn effect. The app leverages the HTML Canvas API for rendering and supports features like undo/redo, drag-to-move, and clear canvas, offering a smooth, intuitive sketching experience in the brows",
+    image: "/Drawing.png",
+    link: "https://drawing124.netlify.app/",
+    tags: ["React.js", "Javascript", "Rough.js", "TailwindCSs"],
   },
   {
     id: 10,
@@ -202,8 +201,8 @@ const projects: Project[] = [
     description:
       "Collaborative task management application with real-time updates and team collaboration features.",
     image: "/project-3.svg",
-    link: "#",
-    tags: ["Vue.js", "Socket.io", "Express"],
+    link: "https://github.com/shriramt124/task-manager",
+    tags: ["React.js", "Socket.io", "Express"],
   },
 ];
 
@@ -225,7 +224,7 @@ const categories = [
   "Cybersecurity",
   "Blockchain",
   "Automation",
-  "Embedded Systems",
+ 
   "Open Source",
   "Hackathon Projects",
 ];
@@ -254,11 +253,10 @@ const PortfolioSection = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                activeCategory === category
-                  ? "bg-primary text-white"
-                  : "bg-card hover:bg-card/80 text-foreground hover:text-primary border border-border"
-              }`}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${activeCategory === category
+                ? "bg-primary text-white"
+                : "bg-card hover:bg-card/80 text-foreground hover:text-primary border border-border"
+                }`}
             >
               {category}
             </button>
