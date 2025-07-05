@@ -95,7 +95,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">contact@devteam.com</p>
+                  <p className="text-muted-foreground">craftrix2025@gmail.com</p>
                 </div>
               </div>
 
@@ -118,37 +118,10 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91-9516559181</p>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-full text-primary">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Innovation Street, Tech City, TC 12345</p>
-                </div>
-              </div>
+ 
             </div>
           </motion.div>
 

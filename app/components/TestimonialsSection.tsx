@@ -1,4 +1,3 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -16,57 +15,30 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Jennifer Martinez',
-    role: 'CEO',
+    name: 'Priya Sharma',
+    role: 'Founder',
     company: 'TechStart Solutions',
-    content: 'Working with this team was exceptional. They delivered our e-commerce platform ahead of schedule and exceeded all our expectations. The attention to detail and communication throughout the project was outstanding.',
+    content: 'Working with this team was exceptional. They delivered our e-commerce platform ahead of schedule and exceeded our expectations. Despite being new to freelancing, their technical skills and dedication really impressed us.',
     rating: 5,
     image: '/client-1.svg',
   },
   {
     id: 2,
-    name: 'David Chen',
+    name: 'Arjun Patel',
     role: 'Product Manager',
     company: 'HealthTech Inc',
-    content: 'The mobile app they developed for us has received amazing feedback from our users. The UI/UX design is intuitive and the performance is flawless. Highly recommend their services!',
-    rating: 5,
+    content: 'The mobile app they developed for us has received great feedback from our users. The UI/UX design is intuitive and performs well. They were very responsive to our feedback throughout the project.',
+    rating: 4,
     image: '/client-2.svg',
   },
   {
     id: 3,
-    name: 'Sarah Williams',
-    role: 'Founder',
-    company: 'EduLearn Platform',
-    content: 'Their AI automation solutions transformed our workflow efficiency by 80%. The LangChain integration they built is exactly what we needed to scale our business operations.',
-    rating: 5,
-    image: '/client-3.svg',
-  },
-  {
-    id: 4,
-    name: 'Michael Thompson',
-    role: 'CTO',
-    company: 'DataFlow Analytics',
-    content: 'The data analytics dashboard they created gives us real-time insights that were impossible before. The team understood our complex requirements and delivered a perfect solution.',
-    rating: 5,
-    image: '/client-4.svg',
-  },
-  {
-    id: 5,
-    name: 'Lisa Rodriguez',
+    name: 'Kavya Reddy',
     role: 'Operations Director',
-    company: 'SmartRetail Co',
-    content: 'Their n8n workflow automation saved us countless hours of manual work. The integration between our tools is seamless and the ROI has been incredible.',
-    rating: 5,
-    image: '/client-5.svg',
-  },
-  {
-    id: 6,
-    name: 'James Park',
-    role: 'Marketing Director',
-    company: 'GrowthHub Agency',
-    content: 'From concept to deployment, they handled everything professionally. The website they built for us has significantly improved our conversion rates and client engagement.',
-    rating: 5,
-    image: '/client-6.svg',
+    company: 'EduLearn Platform',
+    content: 'Their automation solutions helped streamline our workflow significantly. The team was eager to learn and adapt to our specific requirements. Good value for money and timely delivery.',
+    rating: 4,
+    image: '/client-3.svg',
   },
 ];
 
@@ -121,7 +93,7 @@ const TestimonialsSection = () => {
         </div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -134,11 +106,11 @@ const TestimonialsSection = () => {
               variants={itemVariants}
             >
               {renderStars(testimonial.rating)}
-              
+
               <blockquote className="text-foreground mb-6 leading-relaxed">
                 "{testimonial.content}"
               </blockquote>
-              
+
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-primary/60" fill="currentColor" viewBox="0 0 24 24">
