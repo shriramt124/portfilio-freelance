@@ -44,13 +44,13 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "SmartLearn",
-    category: "EdTech · AI Platform",
+    title: "Video to Reels",
+    category: "Ai platform",
     description:
-      "An AI-powered learning platform with resume analysis, YouTube video summarization, quiz generation, and a personalized dashboard. Built with FlutterFlow and Node.js.",
+      "An intelligent web application that automatically generates short video reels from trending YouTube videos using AI. The system downloads trending videos, extracts audio, transcribes speech with timestamps, uses AI to find highlights, creates engaging reels, and uploads them to social media platforms.",
     image: "/project-2.svg",
-    link: "#",
-    tags: ["FlutterFlow", "Node.js", "AI", "NLP", "Resume Analysis", "EdTech"],
+    link: "https://github.com/shrishtinamdeo/video-to-reels",
+    tags: ["Python, OpenAI Whisper, Streamlit, MoviePy, PostgreSQL"],
   },
   {
     id: 3,
@@ -86,16 +86,6 @@ const projects: Project[] = [
       "Video Streaming",
       "Clouodinary",
     ],
-  },
-  {
-    id: 5,
-    title: "VirtualFit",
-    category: "AR/VR · Fashion Tech",
-    description:
-      "An AR/VR-powered clothing trial app that allows users to virtually try on outfits in real-time using Unity and 3D models.",
-    image: "/project-1.svg",
-    link: "#",
-    tags: ["Unity", "AR", "VR", "Fashion Tech", "3D Modeling", "Try-On"],
   },
   {
     id: 6,
